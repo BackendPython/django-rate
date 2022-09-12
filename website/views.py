@@ -10,6 +10,7 @@ def home(request):
     return render(request, 'home.html', context)
 
 def rate_image(request):
+    
 	if request.method == "POST":
 		el_id = request.POST.get("el_id")
 		val = request.POST.get("val")
