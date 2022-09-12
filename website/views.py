@@ -7,3 +7,11 @@ def home(request):
         "rate":rate,
     }
     return render(request, 'home.html', context)
+
+def rateImg(request):
+    if request.method == 'POST':
+        el_id = request.POST.get("el_id")
+        val = request.POST.get("val")
+        rate = RateStars.objects.get(id=el_id)
+        rate.score = val
+        rate.save()
