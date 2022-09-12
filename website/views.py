@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from website.models import *
 
@@ -15,3 +16,5 @@ def rateImg(request):
         rate = RateStars.objects.get(id=el_id)
         rate.score = val
         rate.save()
+        return JsonResponse({"succes": "true", "score": val}, safe=False)
+    return JsonResponse({"succes": False})
