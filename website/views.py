@@ -3,7 +3,7 @@ from django.shortcuts import render
 from website.models import *
 
 def home(request):
-    rate = RateStars.objects.filter(score=0).order_by("?").first()
+    rate = RateStars.objects.filter(score=3).order_by("?").first()
     context = {
         "rate":rate,
     }
