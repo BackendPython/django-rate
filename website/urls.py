@@ -5,5 +5,5 @@ app_name = 'rate'
 
 urlpatterns = [
     path('', home, name='home'),
-    path("rate-image", rateImg, name='rate-image')
+    path("rate-image", rate_image, name='rate-image')
 ]
