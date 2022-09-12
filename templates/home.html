@@ -26,7 +26,7 @@
         <h1>Bu home page</h1>
         <img src="{{ rate.image.url }}" alt="error" width="500" height="500">
         <a href="{% url 'rate:home' %}"><button>Next</button></a>
-        <form method="post" class="rate-form" id="{{ rate.id }}">
+        <form class="rate-form" method="POST" id="{{ rate.id }}">
             {% csrf_token %}
             <button type="submit" class="fa fa-star fa-3x btns" id="first"></button>
             <button type="submit" class="fa fa-star fa-3x btns" id="second"></button>
@@ -34,7 +34,7 @@
             <button type="submit" class="fa fa-star fa-3x btns" id="fourth"></button>
             <button type="submit" class="fa fa-star fa-3x btns" id="fifth"></button>
             <br>
-            <div class="confirm-box"></div>
+            <div id="confirm-box"></div>
         </form>
     </div>
     {% else %}
