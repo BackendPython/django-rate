@@ -28,6 +28,7 @@
         <a href="{% url 'rate:home' %}"><button>Next</button></a>
         <form method="post" class="rate-form" id="{{ rate.id }}">
             {% csrf_token %}
+            
             <button type="submit" class="fa fa-star fa-3x btns" id="first"></button>
             <button type="submit" class="fa fa-star fa-3x btns" id="second"></button>
             <button type="submit" class="fa fa-star fa-3x btns" id="third"></button>
