@@ -26,7 +26,7 @@
         <h1>Bu home page</h1>
         <img src="{{ rate.image.url }}" alt="error" width="500" height="500">
         <a href="{% url 'rate:home' %}"><button>Next</button></a>
-        <form class="rate-form" method="POST" id="{{ rate.id }}">
+        <form class="rate-form" method="POST">
             {% csrf_token %}
             <button type="submit" class="fa fa-star fa-3x btns"></button>
             <button type="submit" class="fa fa-star fa-3x btns"></button>
