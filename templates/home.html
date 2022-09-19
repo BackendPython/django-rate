@@ -28,11 +28,11 @@
         <a href="{% url 'rate:home' %}"><button>Next</button></a>
         <form class="rate-form" method="POST" id="{{ rate.id }}">
             {% csrf_token %}
-            <button type="submit" class="fa fa-star fa-3x btns" id="first"></button>
-            <button type="submit" class="fa fa-star fa-3x btns" id="second"></button>
-            <button type="submit" class="fa fa-star fa-3x btns" id="third"></button>
-            <button type="submit" class="fa fa-star fa-3x btns" id="fourth"></button>
-            <button type="submit" class="fa fa-star fa-3x btns" id="fifth"></button>
+            <button type="submit" class="fa fa-star fa-3x btns"></button>
+            <button type="submit" class="fa fa-star fa-3x btns"></button>
+            <button type="submit" class="fa fa-star fa-3x btns"></button>
+            <button type="submit" class="fa fa-star fa-3x btns"></button>
+            <button type="submit" class="fa fa-star fa-3x btns"></button>
         </form>
     </div>
     {% else %}
